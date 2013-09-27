@@ -1,0 +1,11 @@
+#! /bin/bash
+# "Indica cuantos archivos ocultos, cuantos ficheros ordinarios y cuantos subdirectorios tiene un directorio"
+
+
+lista=`ls -a -l`
+num=0
+for elemento in $lista; do
+	echo " $num. $elemento "
+	num=$[ num + 1 ]
+done
+echo "en total hay $num elementos"

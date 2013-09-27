@@ -1,0 +1,10 @@
+#! /bin/bash
+# muestra el tamaño en MB y la suma total 
+
+echo "Digita un Directorio para saber su tamaño en MB y la suma total  "
+read DIR
+
+
+directory=`du -a -h -c $DIR`
+
+echo "$directory "

@@ -1,0 +1,8 @@
+#! /bin/bash
+# Indica si es una Archivo o un directorio
+echo  "Digite el Nombre del Árchivo o Directorio"
+read  captura
+
+comando=`file $captura`
+
+echo "$comando"
