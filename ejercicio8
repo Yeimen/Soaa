@@ -1,0 +1,8 @@
+#! /bin/bash
+# mostrar la ip
+
+echo -n "Digite la interfaz a cosultar su ip: "
+read OBJETO 
+echo "Digito la interfaz $OBJ"
+
+sudo ifconfig $OBJ | grep inet | cut -c10-35 | cut -d'f' -f2 | cut -d: -f2

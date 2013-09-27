@@ -1,0 +1,26 @@
+#bin/bash
+#Indica si el numero es PAR o IMPAR
+
+echo -n Digita un numero:
+read num
+
+if [ `expr $num % 2` -eq 0 ]
+then 
+
+echo -n  NUMERO PAR
+echo -e
+else
+echo -n  NUMERO IMPAR
+echo -e
+fi
+
+
+
+
+
+ 
+
+
+  
+
+ 

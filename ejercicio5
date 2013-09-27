@@ -1,0 +1,13 @@
+#! /bin/bash 
+# copia de seguridad
+
+filename="copia_seguridad-$(date +%Y%m%d).tar"
+
+echo "creando copia de Backup"
+
+tar -cf /home/andrea/Documentos/$filename /home/andrea/
+7z a /home/andrea/Documentos/$filename.7z -mhe=on /home/andrea/Documentos/$filename
+rm /home/andrea/Documentos/$filename
+
+
+

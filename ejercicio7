@@ -1,0 +1,25 @@
+#!/bin/bash
+#cuenta las vocales y consonantes que tiene una palabra 
+
+echo -n "ingresa una palabra"
+read PAL
+
+PALABRA=`echo $PAL | wc -m`
+pr=$[ $PALABRA - 1 ]
+
+echo "El total de letras es: $pr" 
+cv=0
+cont=0
+while [ $pr -gt 0 ]; do
+	car=`echo $PAL | cut -c $PALABRA`
+	echo "letra fragmentada: $car"
+	if [ $car == 'a' -o $car == 'e' -o $car == 'i' -o $car == 'o' -o $car == 'u' ]; then
+		cv= $[ $cv + 1 ]
+		else
+		cont=$[ $cont + 1 ]
+fi 
+		c2=$[ $pr - 1 ]
+
+done 
+echo "total de vocales es $cv y total de letras es $cont"
+
